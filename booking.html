@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>booking</title>
+    <style>
+        div {
+            display: flex;
+            position: absolute;
+            top: 55px;
+            left: 30vw;
+        }
+        fieldset {
+            border-radius: 9px;
+            padding: 14px 9px;
+        }
+        label[for="to"] { margin-left: 132px; }
+        select[name="from"] {
+            width: 155px;
+        }
+        #from:required {
+            color: #666;
+        }
+        select[name="to"] {
+            margin-left: 55px;
+            width: 155px;
+        }
+        #to:required {
+            color: #666;
+        }
+        option[value=""] {
+            display: none;
+        }
+        #id option {
+            color: #000;
+        }
+        input[name="departing"] {
+            height: 20px;
+            width: 155px;
+        }
+        label[for="returning"] { margin-left:145px; }
+        input[name="returning"] {
+            height: 20px;
+            width: 155px;
+            margin-left: 55px;
+        }
+        #adult,
+        #child,
+        #infant,
+        #currency{
+            width: 55px; height: 20px; margin-right: 26px;
+        }
+        label[for="child"] { margin-left: 56px; }
+        label[for="infant"] { margin-left: 57px; }
+        label[for="currency"] { margin-left: 51px; }
+        input[type="submit"] {
+            padding: 9px 15px;
+            border: none;
+            border-radius: 3px;
+            background-color: #ff501c;
+            color: #ffffff;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form action="#">
+            <fieldset>
+                <legend>Book Flight</legend>
+                <label for="from">Flying from</label>
+                <label for="to">To</label><br>
+                <select id="from" name="from" required>
+                    <option value="" disabled selected>Bangkok</option>
+                    <option value="japan">Bangkok</option>
+                    <option value="korea">Korea</option>
+                    <option value="laos">Laos</option>
+                    <option value="vietnam">Vietnam</option>
+                </select>
+                <select id="to" name="to" required>
+                    <option value="" disabled selected>Japan</option>
+                    <option value="japan">Japan</option>
+                    <option value="korea">Korea</option>
+                    <option value="laos">Laos</option>
+                    <option value="vietnam">Vietnam</option>
+                </select><br><br>
+
+                <label for="departing">Departing</label>
+                <label for="returning">Returning</label><br>
+                <input type="text" id="departing" name="departing"
+                       placeholder="06/09/2020"
+                       onfocus="(this.type='date')"
+                       onblur="(this.type='text')">
+                <input type="text" id="returning" name="returning"
+                       placeholder="06/09/2020"
+                       onfocus="(this.type='date')"
+                       onblur="(this.type='text')"><br><br>
+                <label for="adult">Adult</label>
+                <label for="child">Child</label>
+                <label for="infant">Infant</label>
+                <label for="currency">Currency</label><br>
+                <input type="number" id="adult" name="adult" value="0" placeholder="0"
+                        onchange="">
+                <input type="number" id="child" name="child" value="0" placeholder="0">
+                <input type="number" id="infant" name="infant" value="0" placeholder="0">
+                <input type="number" id="currency" name="currency" value="0" placeholder="0"><br><br>
+
+                <input type="submit" value="SEARCH">
+            </fieldset>
+        </form>
+    </div>
+
+</body>
+</html>
